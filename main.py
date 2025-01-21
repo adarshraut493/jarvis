@@ -10,7 +10,7 @@ recognizer = sr.Recognizer()
 engine = pyttsx3.init()
 
 # API keys
-newsapi = "6507691e062b4ee79c94838ce065eae7"
+newsapi = "<your_api_key>"
 
 def speak(text):
     """Speak the given text."""
@@ -19,7 +19,7 @@ def speak(text):
 
 def aiProcess(command):
     try:
-        client = Groq(api_key="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")  # Ensure the API key is valid
+        client = Groq(api_key="<your_api_key>")  # Ensure the API key is valid
         completion = client.chat.completions.create(
             model="llama-3.3-70b-versatile",  # Ensure this model is available
             messages=[{"role": "system", "content": "You are a virtual assistant named jarvis skilled in general tasks like Alexa and Google Cloud. Give short responses please"},
